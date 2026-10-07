@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+      Permite tráfico HTTP no encriptado (Cleartext) únicamente en entorno de desarrollo.
+      10.0.2.2: Alias que apunta a la máquina host desde el Emulador Android.
+      localhost / 127.0.0.1: Para pruebas de bucle local.
+      Para probar en celular físico: Agrega tu IP local de la red Wi-Fi
+      Ejemplo: <domain includeSubdomains="true">192.168.1.15</domain>
+    -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.0.2.2</domain>
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <!-- Descomenta y ajusta si vas a probar en dispositivo físico:
+        <domain includeSubdomains="true">192.168.1.50</domain>
+        -->
+    </domain-config>
+</network-security-config>
